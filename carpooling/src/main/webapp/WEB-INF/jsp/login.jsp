@@ -26,7 +26,7 @@
             </div>
             <div class="w3-padding">
                 <button type="submit" name="login"
-                    class="w3-button w3-blue w3-round-large w3-hover-light-blue w3-margin-top w3-block w3-padding">Sign Up 
+                    class="w3-button w3-blue w3-round-large w3-hover-light-blue w3-margin-top w3-block w3-padding">Sign In 
                 </button>
             </div>
         </springForm:form>

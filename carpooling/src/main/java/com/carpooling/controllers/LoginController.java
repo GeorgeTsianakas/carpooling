@@ -42,12 +42,12 @@ private LoginValidator loginValidator;
     }
 
     @RequestMapping(value = "/selectaride", method = RequestMethod.POST)
-    public String doLogin(ModelMap mm,@ Valid @ModelAttribute("user") User user,BindingResult br){
+    public String doLogin(ModelMap mm,@ Valid @ModelAttribute("user") User user,BindingResult br,HttpSession session){
         if (br.hasErrors()) {
             return "login";
         } else {
             mm.addAttribute("loggedinuser", userService.getUserByUsername(user.getUsername()));
-            //session.setAttribute("loggedinuser", userService.getUserByUsername(user.getUsername()));
+            session.setAttribute("loggedinuser", userService.getUserByUsername(user.getUsername()));
             return "selectaride";
         }
     }
@@ -60,6 +60,7 @@ private LoginValidator loginValidator;
     @GetMapping("/logout")
     public ModelAndView doLogout(HttpServletRequest request,SessionStatus status) {
         HttpSession session = request.getSession();
+        session.removeAttribute("loggedinuser");
         status.setComplete();
         session.invalidate();
         RequestMappingHandlerAdapter rmha = new RequestMappingHandlerAdapter();

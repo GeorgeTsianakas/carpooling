@@ -49,9 +49,7 @@
                <span id="star5" class="fa fa-star"></span>
                <span id="num"></span>
            </td>  <td rowspan="1">
-               <a href="takethetrip" class="btn btn-primary" id="myBtn2">Take it!</a>
-           </td>
-       </tr>
+               <a href="${pageContext.request.contextPath}/dotaketrip/${trip.tripid}" class="btn btn-primary" id="myBtn2">Take it!</a>
    </table>
 </div>
        </c:forEach>

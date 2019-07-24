@@ -47,6 +47,7 @@
                              <input type="hidden" id="latlngorigin" />  
                             <springForm:hidden path="originlatitude"  id="latorigin" />  
                             <springForm:hidden path="originlongtitude" id="lngorigin" />
+                             <springForm:input path="driverid" value="${sessionScope.loggedinuser.userid}"/>  
                     </div>
                 </div>
                 
@@ -83,6 +84,7 @@
                 <div class="row">
                     <div class="col-12">
                          <springForm:textarea path="info" rows="3" cols="50" class=" button6 button3"/>
+                         
                     </div>
                 </div>
                 <div class="row">
@@ -98,17 +100,14 @@
             <div class="col-sm-12 col-md-12 col-lg-6 map-padding">
                 <div id="map"></div>
                 <div id="infowindow-content ">
-            <!--<img src="" width="16" height="16" id="place-icon">-->
                     <span id="place-name" class="title"></span><br>
                     <span id="place-address"></span>
                 </div>
             </div>
         </div>
     </div>
-
 <div class="row footer">
     <div class="col-12">
-   
    <%@include file="footer.html" %>  
    
       </div> 
@@ -117,4 +116,4 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtNoXw0xit4u4OEX4cay9a9TEI9Q2htU&libraries=places&callback=initMap"
         async defer></script>         
          </body>                  
-</html>       
+</html>          

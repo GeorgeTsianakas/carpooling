@@ -1,6 +1,8 @@
 package com.carpooling.utils;
 
 import com.carpooling.entities.Trip;
+import com.carpooling.entities.User;
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -15,9 +17,9 @@ public String handleRequest (Model model) {
 }
   
 @GetMapping("offeraride")
-public String sendToOfferARideForm(ModelMap mm){
+public String sendToOfferARideForm(ModelMap mm,HttpSession session){
     Trip trip = new Trip();
-    //User logged = (User) session.getAttribute("loggedinuser");
+    User logged = (User) session.getAttribute("loggedinuser");
     mm.addAttribute("newtrip",trip);
     return "offerarideform1";
 }
@@ -40,6 +42,6 @@ public String sendToRidesOffered(Model model){
 @GetMapping("ridestook")
 public String sendToRidesTook(Model model){
     return "ridestook";
-}  
+}
 
 }
