@@ -34,7 +34,8 @@
        <div>
          <h1 id="myTitle">Find a Ride</h1>
        </div>
-       <div id="mybuttons1">
+      <div id="mybuttons1">
+           <form method="POST" action="${path}/find">
            <input id="pac-input-from" type="text" class="button button2" placeholder="Leaving From">
            <input type="hidden" id="latlngorigin" />
             <input type="hidden" id="latorigin" name="latorigin"/>
