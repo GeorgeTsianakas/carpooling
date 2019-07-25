@@ -31,7 +31,7 @@
 					<springForm:errors path="password" />
 				</div>
 				<div class="w3-padding">
-					<input path="" type="password" class="w3-input w3-padding w3-margin-top w3-round-large" id="pass2"
+					<input type="password" class="w3-input w3-padding w3-margin-top w3-round-large" id="pass2"
 						placeholder="Confirm password" />
 					<div class="error w3-text-red w3-center" id="confirm-error">
 					</div>
@@ -47,7 +47,7 @@
 					<springForm:errors path="lastname" />
 				</div>
 				<div class="w3-padding">
-					<springForm:input path="birthdate"
+					<springForm:input type="date" path="birthdate" id="birthdate"
 						cssClass="w3-input w3-padding w3-margin-top w3-round-large" placeholder="Enter birthdate" />
 					<springForm:errors path="birthdate" />
 				</div>
@@ -60,19 +60,12 @@
 					<button type="submit" name="register"
 						class="w3-button w3-blue w3-round-large w3-hover-light-blue w3-margin-top w3-block w3-padding">Sign
 						up </button>
-					<p class="w3-center">By clicking the button you agree to the <button class="btn btn-link">terms of
-							service</button> </p>
+					<p class="w3-center">By clicking the button you agree to the terms of
+							service</p>
 				</div>
 			</springForm:form>
 		</div>
-		<!-- <div id="modal-terms" class="w3-card w3-hide">
-			<h1>
-				Terms of Service
-			</h1>
-			<p>
-				No terms of service
-			</p>
-		</div> -->
+            
 		<script>
 			$("#pass2").keyup(function () {
 				if ($("#pass1").val() != $("#pass2").val()) {
@@ -89,5 +82,10 @@
 				}
 			});
 		</script>
+                <script>
+                        $('#birthdate').datepicker({
+                            format : 'YYYY-MM-dd'
+                        });
+                </script>
 	</body>
 	</html>

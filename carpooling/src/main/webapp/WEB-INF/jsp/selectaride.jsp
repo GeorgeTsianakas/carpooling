@@ -28,33 +28,23 @@
     <body>
            
  <%@include file="header.jsp" %> 
-
         <div class="containermenu">
            
                     <img src="img/findaride.jpg"  style="width:100%" alt="Compttttuter Hope" >
                         <div class="centered">
-
-
                             <div> 
                                  <h1 id="myTitle">Find a Ride</h1>
                             </div>
                             
                           <div id="mybuttons1">
-
-                                <button type=form class=" button button2" onclick="location.href='findaride'"> Leaving From </button><br>
-                                <button type=form class=" button button2" onclick="location.href='findaride'"> Going to </button><br>
-                                <button type="date" class=" button button2" onclick="location.href='findaride'"> dd/mm/yyyy</button><br>
-
+                              <button type=form  class=" button button6" onclick="location.href='findaride'"><h2>Click here to</h2> <h1>Find a Ride </h1></button><br>
                          </div>
-
                         </div>
                     
                     </div>
                             
              <p>
-
                 <div class="containermenu">
-
                         <table>
                             <tr>
                                 <td id="photo_table" >
@@ -63,7 +53,7 @@
                                
                                     <td  class="containermenu offeraride_td centered_table_td">
                                     <div> 
-                                            <h2 id="myTitle">Offer a Ride</h6>
+                                            <h2 id="myTitle2">Offer a Ride</h6>
                                        </div>
                                            <button type=form class=" button4 button3" onclick="location.href='offeraride'"> Riding From </button><br>
                                            <button type=form class=" button4 button3" onclick="location.href='offeraride'" > Riding to </button><br>
@@ -71,7 +61,6 @@
                                      
                                </td>
                             </tr>
-
                         </table>
                 </div>
        
@@ -83,4 +72,3 @@
                   
     </body>                  
 </html>
-  

@@ -21,6 +21,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "user")
@@ -76,6 +77,7 @@ public class User implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "birthdate")
+    @DateTimeFormat(pattern="YYYY-MM-dd")
     @Temporal(TemporalType.DATE)
     private Date birthdate;
     @Basic(optional = false)

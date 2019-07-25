@@ -47,7 +47,7 @@
                              <input type="hidden" id="latlngorigin" />  
                             <springForm:hidden path="originlatitude"  id="latorigin" />  
                             <springForm:hidden path="originlongtitude" id="lngorigin" />
-                             <springForm:input path="driverid" value="${sessionScope.loggedinuser.userid}"/>  
+                             <springForm:input path="driverid" type="hidden" value="${sessionScope.loggedinuser.userid}"/>  
                     </div>
                 </div>
                 

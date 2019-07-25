@@ -27,6 +27,7 @@
    </head>
    <body>
 <%@include file="header.jsp" %>
+<c:set var="path" value="${pageContext.request.contextPath}"></c:set>
 <div class="containermenu first">
      <img src="img/findaride.jpg" style="width:100%" alt="Computer Hope">
      <div class="centered">
@@ -36,14 +37,16 @@
        <div id="mybuttons1">
            <input id="pac-input-from" type="text" class="button button2" placeholder="Leaving From">
            <input type="hidden" id="latlngorigin" />
-            <input type="hidden" id="latorigin" />
-             <input type="hidden" id="lngorigin" />
+            <input type="hidden" id="latorigin" name="latorigin"/>
+             <input type="hidden" id="lngorigin" name="lngorigin"/>
            <input id="pac-input-to" type="text" class="button button2" placeholder="Going To">
-            <input type="hidden" id="latlngdestination"></input>
-             <input type="hidden" id="latdestination"></input>
-              <input type="hidden" id="lngdestination"></input>
-           <input type="datetime-local" class="button button2">
-           <button type="submit" class=" button5 submit_button1" onclick="location.href='getalltrips'">Submit</button>
+            <input type="hidden" id="latlngdestination"/>
+             <input type="hidden" id="latdestination" name="latdestination"/>
+              <input type="hidden" id="lngdestination" name="lngdestination"/>
+           <input type="datetime" name="date" class="button button2">
+           
+           <button type="submit" class="button5 submit_button1">Submit</button>
+           </form>
        </div>
        <div id="map"></div>
      </div>
