@@ -11,8 +11,8 @@ import org.springframework.validation.Validator;
 @Component
 public class LoginValidator implements Validator {
 
-@Autowired
-private UserService userService;
+    @Autowired
+    private UserService userService;
 
     @Override
     public boolean supports(Class<?> type) {

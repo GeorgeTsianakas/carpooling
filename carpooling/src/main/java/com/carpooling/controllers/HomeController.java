@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-@GetMapping("/")
-public String home(ModelMap mm) {
-    mm.put("userforsignin",new User());
-    mm.put("userforsignup",new User());
-    return "index";
-}
+    @GetMapping("/")
+    public String home(ModelMap mm) {
+        mm.put("userforsignin", new User());
+        mm.put("userforsignup", new User());
+        return "index";
+    }
 
-//@RequestMapping
-//public String homeReturn(ModelMap mm) {
-//    return "index";
-//}    
+//    @RequestMapping
+//    public String homeReturn(ModelMap mm) {
+//        return "index";
+//    }
 
 }

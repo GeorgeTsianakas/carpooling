@@ -9,9 +9,9 @@ import org.springframework.validation.Validator;
 
 @Component
 public class RegisterValidator implements Validator {
-    
-@Autowired
-private UserService userService;
+
+    @Autowired
+    private UserService userService;
 
     @Override
     public boolean supports(Class<?> type) {
@@ -24,6 +24,7 @@ private UserService userService;
         boolean check = userService.checkIfUsernameExists(user.getUsername());
         if (check) {
             errors.rejectValue("username", "username.unique");
-        }    }
-    
-}   
+        }
+    }
+
+}

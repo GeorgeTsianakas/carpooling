@@ -25,10 +25,10 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @Controller
 public class LoginController {
 
-@Autowired
-private UserService userService;
-@Autowired
-private LoginValidator loginValidator;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private LoginValidator loginValidator;
 
     @InitBinder
     private void initBinder(WebDataBinder binder) {
@@ -36,15 +36,15 @@ private LoginValidator loginValidator;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap mm){
+    public String showLoginPage(ModelMap mm) {
         mm.addAttribute("user", new User());
         return "login";
     }
 
     @RequestMapping(value = "/selectaride", method = RequestMethod.POST)
-    public String doLogin(ModelMap mm,@ Valid @ModelAttribute("user") User user,BindingResult br,HttpSession session){
+    public String doLogin(ModelMap mm, @Valid @ModelAttribute("user") User user, BindingResult br, HttpSession session) {
         if (br.hasErrors()) {
-            return "login";
+            return "redirect:/login";
         } else {
             mm.addAttribute("loggedinuser", userService.getUserByUsername(user.getUsername()));
             session.setAttribute("loggedinuser", userService.getUserByUsername(user.getUsername()));
@@ -58,7 +58,7 @@ private LoginValidator loginValidator;
     }
 
     @GetMapping("/logout")
-    public ModelAndView doLogout(HttpServletRequest request,SessionStatus status) {
+    public ModelAndView doLogout(HttpServletRequest request, SessionStatus status) {
         HttpSession session = request.getSession();
         session.removeAttribute("loggedinuser");
         status.setComplete();
@@ -69,5 +69,5 @@ private LoginValidator loginValidator;
         CookieHandler.removeCookie(request.getCookies());
         return new ModelAndView("redirect:/login");
     }
-    
+
 }

@@ -6,8 +6,8 @@ import java.util.Map;
 import javax.servlet.http.Cookie;
 
 public class CookieHandler  {
-    
-private static HashMap<Integer, String> idCookieMap = new HashMap<>();
+
+    private static HashMap<Integer, String> idCookieMap = new HashMap<>();
 
     // retrieve the JSESSIONID cookie from the request cookies list
     public static String getCookie(Cookie[] cookies) {
@@ -58,5 +58,5 @@ private static HashMap<Integer, String> idCookieMap = new HashMap<>();
         }
         return false;
     }
-    
+
 }

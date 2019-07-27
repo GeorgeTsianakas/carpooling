@@ -21,29 +21,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "register")
 public class RegisterController {
-    
-@Autowired
-private UserService userService;
-@Autowired
-private RegisterValidator registerValidator;
-    
+
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private RegisterValidator registerValidator;
+
     @InitBinder
-    private void initBinder(WebDataBinder binder){
-        binder.setValidator(registerValidator);    
+    private void initBinder(WebDataBinder binder) {
+        binder.setValidator(registerValidator);
         // Date - YYYY-MM-dd
         SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
         binder.registerCustomEditor(Date.class, new CustomDateEditor(
                 dateFormat, false));
     }
-      
+
     @RequestMapping(value = "/createaccount", method = RequestMethod.GET)
-    public String showRegistrationPage(ModelMap mm){
+    public String showRegistrationPage(ModelMap mm) {
         mm.addAttribute("user", new User());
         return "register";
     }
- 
+
     @RequestMapping(value = "/docreateaccount", method = RequestMethod.POST)
-    public String doRegister(ModelMap mm,@Valid @ModelAttribute("user") User user,BindingResult br){
+    public String doRegister(ModelMap mm, @Valid @ModelAttribute("user") User user, BindingResult br) {
         if (br.hasErrors()) {
             return "register";
         } else {
@@ -55,5 +55,5 @@ private RegisterValidator registerValidator;
             return "home";
         }
     }
-    
+
 }

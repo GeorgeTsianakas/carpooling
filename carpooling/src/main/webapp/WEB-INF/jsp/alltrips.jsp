@@ -21,6 +21,7 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
+        <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
 
         <c:forEach var = "trip" items="${trips}">
             <div class="ex2 w3-row-padding w3-container w3-padding">
@@ -50,7 +51,7 @@
                             <span id="star5" class="fa fa-star"></span>
                             <span id="num"></span>
                         </td>  <td rowspan="1">
-                            <a href="takethetrip" class="btn btn-primary" id="myBtn2">Take it!</a>
+                            <a href="${path}/dotaketrip/${trip.tripid}" class="btn btn-primary" id="myBtn2">Take it!</a>
                         </td>
                     </tr>
                 </table>

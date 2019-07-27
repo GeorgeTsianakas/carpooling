@@ -8,13 +8,13 @@ import org.springframework.validation.Validator;
 @Component
 public class UserValidator implements Validator {
 
-@Override
+    @Override
     public boolean supports(Class<?> type) {
         return User.class.equals(type);
     }
 
-@Override
-public void validate(Object o, Errors errors) {
+    @Override
+    public void validate(Object o, Errors errors) {
         User user = (User) o;
         if (!user.getFirstname().matches("^[a-zA-Z]*$")) {
             errors.rejectValue("firstname", "name.only.letters");
@@ -23,5 +23,5 @@ public void validate(Object o, Errors errors) {
             errors.rejectValue("lastname", "name.only.letters");
         }
     }
-    
+
 }

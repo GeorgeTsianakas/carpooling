@@ -3,10 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="refresh" content="3; url= ${pageContext.request.contextPath}/login" />
         <title>Home</title>
     </head>
     <body>
-        <h1>Successfully Registered !</h1> 
+        <h1>Successfully Registered !</h1>
     </body>
 </html>
