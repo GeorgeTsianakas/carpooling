@@ -7,6 +7,6 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Successfully Registered !</h1>
+        <center>Successfully Registered !</center>
     </body>
 </html>

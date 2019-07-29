@@ -11,11 +11,8 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="css/alltrips.css" rel="stylesheet">
 
     </head>
@@ -24,7 +21,9 @@
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
 
         <c:forEach var = "trip" items="${trips}">
+            
             <div class="ex2 w3-row-padding w3-container w3-padding">
+                
                 <table  class="w3-table w3-twothird w3-padding float_center  ">
                     <tr class="w3-padding">
                         <td rowspan="2">  <img src="img/default-profile-300x300.png"></td>
@@ -42,14 +41,15 @@
                     </tr>
                     <tr class="w3-padding">
                         <td> <a href="viewprofile">See profile</a> </td>
-                        <td  colspan="2"> User rating: <input type="hidden" id="rating" value="${trip.driverid.rating}" /> 
-                            <input type="hidden" id="ratedby" value="${trip.driverid.ratedby}" /> 
-                            <span id="star1" class="fa fa-star"></span>
-                            <span id="star2" class="fa fa-star"></span>
-                            <span id="star3" class="fa fa-star"></span>
-                            <span id="star4" class="fa fa-star"></span>
-                            <span id="star5" class="fa fa-star"></span>
-                            <span id="num"></span>
+                        <td  colspan="2" class="stars"> User rating:
+                            <input type="hidden" class="rating"  value="${trip.driverid.rating}" /> 
+                            <input type="hidden" class="ratedby"  value="${trip.driverid.ratedby}" /> 
+                            <span id="star1" class="fa fa-star star1"></span>
+                            <span id="star2" class="fa fa-star star2"></span>
+                            <span id="star3" class="fa fa-star star3"></span>
+                            <span id="star4" class="fa fa-star star4"></span>
+                            <span id="star5" class="fa fa-star star5"></span>
+                            <span>(${trip.driverid.ratedby})</span>
                         </td>  <td rowspan="1">
                             <a href="${path}/dotaketrip/${trip.tripid}" class="btn btn-primary" id="myBtn2">Take it!</a>
                         </td>

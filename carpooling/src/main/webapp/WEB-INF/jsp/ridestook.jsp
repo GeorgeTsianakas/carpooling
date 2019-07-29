@@ -23,11 +23,9 @@
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
         <%@include file="header.jsp" %>
         <c:forEach var = "trip" items="${thetakenktriplist}">
-            <c:out value="${trip.tripid}"/>
             <div class="ex2 w3-row-padding w3-container w3-padding">
                 <table  class="w3-table w3-twothird w3-padding float_center  ">
                     <tr class="w3-padding">
-                        <td rowspan="2">  <img src="/carpooling/img/default-profile-300x300.png"></td>
                         <td colspan="2">
                             <h3> <c:out value="${trip.driverid.firstname}"/>  <c:out value="${trip.driverid.lastname}"/></h3>
                         <td   rowspan="1"> Available Seats:
@@ -43,9 +41,6 @@
                         </td>
                     </tr>
                     <tr class="w3-padding">
-                        <td>
-                            <a href="viewprofile">See profile</a>
-                        </td>
                         <td rowspan="1">
                             <h3>Rate</h3>
                             <div>

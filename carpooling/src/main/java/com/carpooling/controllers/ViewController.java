@@ -53,4 +53,10 @@ public class ViewController {
     public String sendToadministratorPage(Model model) {
         return "administratorform1";
     }
+    
+    @GetMapping("donate")
+    public String donateCarpooling(Model model) {
+        return "donate";
+    }
+    
 }

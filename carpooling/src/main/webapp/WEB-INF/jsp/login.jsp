@@ -12,33 +12,48 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <title>Sign In</title>
     </head>
-    <div class="w3-container">
-        <springForm:form method="post" modelAttribute="user" action ="${pageContext.request.contextPath}/selectaride" cssClass="w3-display-middle w3-padding w3-light-gray w3-round-large">
-            <div class="w3-padding">
-                <springForm:input path="username" cssClass="w3-input w3-padding w3-margin-top w3-round-large"
-                                  placeholder="Enter username" />
-                <springForm:errors path="username" />
-            </div>
-            <div class="w3-padding">
-                <springForm:input path="password" type="password"
-                                  cssClass="w3-input w3-padding w3-margin-top w3-round-large" placeholder="Enter password" />
-                <springForm:errors path="password" />
-            </div>
-            <div class="w3-padding">
-                <button type="submit" name="login"
-                        class="w3-button w3-blue w3-round-large w3-hover-light-blue w3-margin-top w3-block w3-padding">Sign In 
-                </button>
-            </div>
-        </springForm:form>
-    </div>
+    <body>
+        <div class="w3-container">
+            <springForm:form method="post" modelAttribute="user" action ="${pageContext.request.contextPath}/selectaride" cssClass="w3-display-middle w3-padding w3-light-gray w3-round-large">
+                <div class="w3-padding">
+                    <springForm:input id="username" path="username" cssClass="w3-input w3-padding w3-margin-top w3-round-large"
+                                      placeholder="Enter username" />
+                    <springForm:errors path="username" />
+                </div>
+                <div class="w3-padding">
+                    <springForm:input id="password" path="password" type="password"
+                                      cssClass="w3-input w3-padding w3-margin-top w3-round-large" placeholder="Enter password" />
+                    <springForm:errors path="password" />
+                </div>
+                <div class="w3-padding">
+                    <button type="submit" name="login"
+                            class="w3-button w3-blue w3-round-large w3-hover-light-blue w3-margin-top w3-block w3-padding">Sign In 
+                    </button>
+                </div>
+                <div class="w3-center">
+                    <div>
+                        <p>You don't have an account?</p>
+                    </div>
+                    <div> 
+                        <a href="${pageContext.request.contextPath}/register/createaccount">Sign up here!</a>
+                    </div>
+                </div> 
+            </springForm:form>
+            <!--        -->
+        </div>
 
-    <div class="w3-display-bottom">
-        <div>
-            <p>You don't have an account?</p>
-        </div>
-        <div> 
-            <a href="${pageContext.request.contextPath}/register/createaccount">Sign up here!</a>
-        </div>
-    </div> 
-</body>
+        <script>
+            $(document).ready(() => {
+                $('button').click((event) => {
+                    let one = $('#username').val();
+                    let two = $('#password').val();
+
+                    if (!(one && two)) {
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
+
+    </body>
 </html>
