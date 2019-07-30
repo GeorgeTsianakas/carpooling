@@ -55,8 +55,8 @@ crossorigin="anonymous"></script>
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/profile">Profile</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/getridesoffered/${sessionScope.loggedinuser.userid}">Rides Offered</a>
-
                         <a class="dropdown-item" href="${pageContext.request.contextPath}/getridestaken/${sessionScope.loggedinuser.userid}">Rides Took</a>
+                        <a class="dropdown-item" href="${pageContext.request.contextPath}/email/${sessionScope.loggedinuser.userid}">Send Message</a>
                         <div class="dropdown-divider"></div>
                         <a  class="dropdown-item btn btn-link" onclick="href = '${pageContext.request.contextPath}/logout'">Logout</a>    
                     </div>

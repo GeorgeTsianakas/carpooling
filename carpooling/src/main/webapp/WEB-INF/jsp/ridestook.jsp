@@ -11,13 +11,10 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="/carpooling/css/ridestook.css" rel="stylesheet">
-        <script src="/carpooling/js/ridestook.js" ></script>
+        <!--<script src="/carpooling/js/ridestook.js" ></script>-->
     </head>
     <body>
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
@@ -45,7 +42,7 @@
                             <h3>Rate</h3>
                             <div>
                                 <form action="${path}/rate" method="post">
-                                    <input id="rating" type="hidden" name="rating" /> 
+                                    <input class="rating" type="hidden" name="rating" /> 
                                     <input type="hidden" name="driver" value="${trip.driverid.userid}"/>
                                     <button type="submit">
                                         <span id="star1" class="fa fa-star"></span>
@@ -53,7 +50,7 @@
                                         <span id="star3" class="fa fa-star"></span>
                                         <span id="star4" class="fa fa-star"></span>
                                         <span id="star5" class="fa fa-star"></span>
-                                        <span id="res"></span>
+                                        <span class="res"></span>
                                     </button>
                                 </form>
                             </div> 
@@ -65,6 +62,24 @@
         <p>
             <%@include file="footer.html" %>
         </p>
-
+        <script>
+            $(document).ready(function () {
+                $(".fa").hover(function () {
+                    $(this).addClass('picked');
+                    $(this).prevAll('.fa').addClass('picked');
+                }, function () {
+                    $(this).removeClass('picked');
+                    $(this).prevAll('.fa').removeClass('picked');
+                });
+                $('.fa').click(function (e) {
+                    let t = $(this);
+                    t.addClass('checked');
+                    t.prevAll('.fa').addClass("checked");
+                    let x = $('.checked').length;
+                    t.parent().children('.res').html(x + "!");
+                    t.parent().parent().children('.rating').val(x);
+                });
+            });
+        </script>
     </body>
 </html>

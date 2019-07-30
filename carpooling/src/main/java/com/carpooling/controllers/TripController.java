@@ -5,18 +5,15 @@ import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
 import com.carpooling.services.TripService;
 import com.carpooling.utils.TripUtils;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import static java.util.stream.Collectors.toList;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,7 +48,10 @@ public class TripController {
 
     @RequestMapping(value = "getalltrips", method = RequestMethod.GET)
     public String allTrips(ModelMap mm) {
-        List<Trip> trips = tripService.findAllTrips();
+        List<Trip> trips = tripService.findAllTrips()
+                .stream()
+                .filter((t) -> t.getAvailableseats() > 0)
+                .collect(toList());
         mm.put("trips", trips);
         return "alltrips";
     }

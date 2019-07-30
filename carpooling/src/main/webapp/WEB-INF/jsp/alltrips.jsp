@@ -21,12 +21,11 @@
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
 
         <c:forEach var = "trip" items="${trips}">
-            
+
             <div class="ex2 w3-row-padding w3-container w3-padding">
-                
+
                 <table  class="w3-table w3-twothird w3-padding float_center  ">
                     <tr class="w3-padding">
-                        <td rowspan="2">  <img src="img/default-profile-300x300.png"></td>
                         <td colspan="2">
                             <c:out value="${trip.driverid.username}"></c:out>  <!-- drivers username -->
                             <td   rowspan="1"> Available Seats:
@@ -40,7 +39,6 @@
                         </td>
                     </tr>
                     <tr class="w3-padding">
-                        <td> <a href="viewprofile">See profile</a> </td>
                         <td  colspan="2" class="stars"> User rating:
                             <input type="hidden" class="rating"  value="${trip.driverid.rating}" /> 
                             <input type="hidden" class="ratedby"  value="${trip.driverid.ratedby}" /> 
