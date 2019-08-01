@@ -15,12 +15,9 @@
         </script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="css/profile.css" rel="stylesheet">
-
     </head>
     <body>
         <%@include file="header.jsp" %>
-
-
         <div class="ex2 w3-row-padding w3-container w3-padding">
             <table  class="w3-table w3-twothird w3-padding float_center  ">
                 <tr class="w3-padding">
@@ -35,49 +32,38 @@
                         <span id="star4" class="fa fa-star"></span>
                         <span id="star5" class="fa fa-star"></span>
                         <span id="num"></span> 
-                        <h5> Birthdate: <c:out value="${sessionScope.loggedinuser.birthdate}"/> </h5>
+                        <h5>Birth  Date: <c:out value="${sessionScope.loggedinuser.birthdate}"/> </h5>
                     </td>
-
                 </tr>
                 <tr class="w3-padding">
                     <td  colspan="2"> 
-                        <h5>Cellphone: <c:out value="${sessionScope.loggedinuser.cellphone}"/> </h5>
-
+                        <h5>Mobile <c:out value="${sessionScope.loggedinuser.cellphone}"/> </h5>
                     </td>
                 </tr>
                 <tr class="w3-padding">
-<!--                    <td> 
-                        <a href="#">Upload Photo</a> 
-                    </td>-->
+                    <td> 
+                        <form method="GET" action="updateuser">
+                            <center>   <button type="submit">Update My Profile</button></center>
+                        </form>
+                    </td>
                     <td  colspan="2"> 
                         <h5>E-mail: <c:out value="${sessionScope.loggedinuser.email}"/> </h5>
                     </td>
                 </tr>
             </table>
         </div>
-
-
         <p> 
             <%@include file="footer.html" %>
         </p>
-
         <script>
             $(document).ready(function () {
-
                 let ratedby = $('#ratedby').val();
                 $("#num").html("(" + ratedby + ")");
-
                 if (ratedby == 0) {
-
                 } else {
-
                     var rating = $('#rating').val() / ratedby;
-//    console.log(rating);
                     rating = rating.toPrecision(1);
-
-
                     if (rating >= 1) {
-
                         $('#star1').addClass('checked');
                     }
                     if (rating >= 2) {
@@ -89,11 +75,9 @@
                     if (rating >= 4) {
                         $('#star4').addClass('checked');
                     }
-
                     if (rating >= 5) {
                         $('#star5').addClass('checked');
                     }
-
                 }
             });
         </script>

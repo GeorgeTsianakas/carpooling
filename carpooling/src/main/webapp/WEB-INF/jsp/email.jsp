@@ -26,7 +26,7 @@
     <body>
         <%@include file="header.jsp" %> 
         <div class="containermenu">
-            <img src="/carpooling/img/findaride.jpg" style="width:100%" alt="Computer Hope">
+            <img src="/carpooling/img/sendemail.jpg" style="width:100%" alt="Computer Hope">
             <div class="centered">
                 <div>
                     <h1 id="myTitle">Send E-mail</h1>
@@ -34,9 +34,9 @@
                 <div id="mybuttons1">
                     <h2>
                         <form method="POST" action="${pageContext.request.contextPath}/sendemail">
-                            <input name="subject" type="text" class=" button button2" placeholder="Enter your email">
-                            <textarea name="textarea" type=text rows="10" cols="50" class=" button button2" placeholder="Write here your message"></textarea><br>
-                            <button type="submit" class="button submit_button1" >Send</button>
+                            <input name="subject" id="mail" type="text" class=" button button2" placeholder="Enter your email">
+                            <textarea name="textarea" id="text" type=text rows="10" cols="50" class=" button button2" placeholder="Write here your message"></textarea><br>
+                            <button type="submit" id="button" class="button submit_button1" >Send</button>
                         </form>
                     </h2>
                 </div>
@@ -46,5 +46,17 @@
             <%@include file="footer.html" %>  
             <!--footer-->
         </p>
+        <script>
+            $(document).ready(() => {
+                $('#button').click((event) => {
+                    let one = $('#mail').val();
+                    let two = $('#text').val();
+
+                    if (!(one && two)) {
+                        event.preventDefault();
+                    }
+                });
+            });
+        </script>
     </body>                  
 </html>

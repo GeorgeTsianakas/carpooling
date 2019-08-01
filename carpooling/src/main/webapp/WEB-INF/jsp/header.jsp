@@ -30,11 +30,18 @@ crossorigin="anonymous"></script>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
                 <c:if test="${sessionScope.loggedinuser.role eq 'admin'}">
-
-                    <li class="nav-item active">
-
-                        <a class="nav-link btn btn-link" id="nav_adminpage"  onclick="location.href = '${pageContext.request.contextPath}/admin'" > Admin Functions</a> 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin Functions
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  href="${pageContext.request.contextPath}/adminallusers">All Users</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="${pageContext.request.contextPath}/adminalltrips">All Trips</a>
+                        </div>
                     </li>
+
                 </c:if>
 
                 <li class="nav-item active">

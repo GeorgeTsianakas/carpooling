@@ -22,27 +22,22 @@
         <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
         <link href="css/selectaride.css" rel="stylesheet" type="text/css"> 
         <script src="js/selectaride.js" ></script>
-
     </head>
-
     <body>
-
         <%@include file="header.jsp" %> 
         <div class="containermenu">
-
             <img src="img/findaride.jpg"  style="width:100%" alt="Compttttuter Hope" >
             <div class="centered">
                 <div> 
                     <h1 id="myTitle">Find a Ride</h1>
                 </div>
-
                 <div id="mybuttons1">
-                    <button type=form  class=" button button6" onclick="location.href = 'findaride'"><h2>Click here to</h2> <h1>Find a Ride </h1></button><br>
+                    <button type=form class="button button2" onclick="location.href = 'findaride'"> Leaving From </button><br>
+                    <button type=form class="button button2" onclick="location.href = 'findaride'"> Going to </button><br>
+                    <button type="date" class="button button2" onclick="location.href = 'findaride'"> dd/mm/yyyy</button><br>
                 </div>
             </div>
-
         </div>
-
         <p>
         <div class="containermenu">
             <table>
@@ -50,7 +45,6 @@
                     <td id="photo_table" >
                         <img src="img/offeraride.jpg"  style="width:100%" alt="Cooooooomputer Hope" >
                     </td >
-
                     <td  class="containermenu offeraride_td centered_table_td">
                         <div> 
                             <h2 id="myTitle2">Offer a Ride</h6>
@@ -58,17 +52,14 @@
                         <button type=form class=" button4 button3" onclick="location.href = 'offeraride'"> Riding From </button><br>
                         <button type=form class=" button4 button3" onclick="location.href = 'offeraride'" > Riding to </button><br>
                         <button type="date" class=" button4 button3" onclick="location.href = 'offeraride'" > dd/mm/yyyy</button><br>
-
                     </td>
                 </tr>
             </table>
         </div>
-
     </p>
     <p>
         <%@include file="footer.html" %>  
         <!--footer-->
     </p>
-
 </body>                  
 </html>

@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="/carpooling/css/ridestook.css" rel="stylesheet">
+        <link href="/carpooling/css/profile.css" rel="stylesheet">
         <!--<script src="/carpooling/js/ridestook.js" ></script>-->
     </head>
     <body>
@@ -26,15 +26,15 @@
                         <td colspan="2">
                             <h3> <c:out value="${trip.driverid.firstname}"/>  <c:out value="${trip.driverid.lastname}"/></h3>
                         <td   rowspan="1"> Available Seats:
-                            <h4>   <c:out value="${trip.availableseats}"/> </h4>
+                            <h3>   <c:out value="${trip.availableseats}"/> </h3>
                         </td>
                     </tr>
                     <tr class="w3-padding">
                         <td  colspan="2">From <h3> <c:out value="${trip.origin}"/> </h3> To <h3><c:out value="${trip.destination}"/> </h3> At <h3> <c:out value="${trip.date}"/> </h3></td>
                         <td rowspan="1">Cost:
-                            <h4>  <c:out value="${trip.costperseat}"/> &euro;</h4>
-                            <h4>Info</h4>
-                            <p> <c:out value="${trip.info}"/> </p>
+                            <h3>  <c:out value="${trip.costperseat}"/> &euro;</h3>
+                            Info
+                            <h3> <c:out value="${trip.info}"/> </h3>
                         </td>
                     </tr>
                     <tr class="w3-padding">

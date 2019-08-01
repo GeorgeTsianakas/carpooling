@@ -22,7 +22,7 @@
         <%@include file="header.jsp" %>
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
             <div class="containermenu first">
-                <img src="img/findaride.jpg" style="width:100%" alt="Computer Hope">
+                <img src="img/findaride_02.jpg" style="width:100%" alt="Computer Hope">
                 <div class="centered">
                     <div>
                         <h1 id="myTitle">Find a Ride</h1>
@@ -54,18 +54,18 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtNoXw0xit4u4OEX4cay9a9TEI9Q2htU&libraries=places&callback=initMap"
         async defer></script>
         <script>
-            $(document).ready( ()=> {
-                
-                $('#sub').on('click', (event)  => {
+            $(document).ready(() => {
+
+                $('#sub').on('click', (event) => {
                     let x = $('#pac-input-from').val();
                     let y = $('#pac-input-to').val();
                     let z = $('#d').val();
-                    
-                    if( !(x && y && z)){
+
+                    if (!(x && y && z)) {
                         event.preventDefault();
                     }
                 });
-                
+
             });
         </script>
     </body>

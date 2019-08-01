@@ -10,17 +10,10 @@
         <title>Select A Ride</title>
         <link href="fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
         <link href="css/offeraride.css" rel="stylesheet" type="text/css"> 
         <script src="js/offeraride_melatlng.js" ></script>
@@ -55,15 +48,20 @@
                             <div class="col-12">
                                 <springForm:input path="destination" id="pac-input-to" type="text" class=" button4 button3" placeholder="Riding To"/>
                                 <springForm:errors path="destination" />
-                                <input type="hidden" id="latlngdestination"></input>
+                                <input type="hidden" id="latlngdestination"/>
                                 <springForm:hidden path="destinationlatitude"  id="latdestination" /> 
                                 <springForm:hidden path="destinationlongtitude" id="lngdestination" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <springForm:input type="datetime" path="date" class=" button4 button3" placeholder="Enter Date"/>
-                                <springForm:errors path="date" />
+                                <input type="datetime-local" id="dtlocal" class="button4 button3" placeholder="Enter Date"/>
+
+                                <input type="hidden" id="year" name="year"/>
+                                <input type="hidden" id="month" name="month" />
+                                <input type="hidden" id="day" name ="day" />
+                                <input type="hidden" id="hour" name="hour" />
+                                <input type="hidden" id="mins" name="mins" />
                                 <springForm:input path="totalseats" type="hidden" class=" button5 button3" name="quantity" value="4" />
 
                             </div>
@@ -90,7 +88,7 @@
                         <div class="row">
                             <div class="col-12">
 
-                                <button type="submit" class="button5 submit_button2" >Submit</button>
+                                <button type="submit" id="subbutton" class="button5 submit_button2" >Submit</button>
                             </div>
 
                         </div>
@@ -99,7 +97,7 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 map-padding">
                     <div id="map"></div>
-                    <div id="infowindow-content ">
+                    <div id="infowindow-content">
                         <span id="place-name" class="title"></span><br>
                         <span id="place-address"></span>
                     </div>
@@ -114,6 +112,26 @@
         </div> 
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtNoXw0xit4u4OEX4cay9a9TEI9Q2htU&libraries=places&callback=initMap"
-        async defer></script>         
+        async defer></script>  
+
+        <script>
+            $(document).ready(function () {
+                $('#subbutton').on('click', function (event) {
+                    let x = $('#dtlocal').val().split('T');
+                    let d = x[0];
+                    let t = x[1];
+                    let s = d.split('-');
+                    let y = t.split(':');
+                    $('#year').val(s[0]);
+                    $('#month').val(s[1]);
+                    $('#day').val(s[2]);
+                    $('#hour').val(y[0]);
+                    $('#mins').val(y[1]);
+
+                });
+            });
+
+        </script>
+
     </body>                  
-</html>          
+</html>     

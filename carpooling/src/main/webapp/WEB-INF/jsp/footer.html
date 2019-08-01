@@ -7,7 +7,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/d64b2059a5.js"></script>
-
 <!-- Footer -->
 <footer class="footer bg-light">
     <div class="container">
@@ -27,7 +26,7 @@
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <button class="btn btn-link prvcplc" id="prvcplc">Privacy Policy</button>
+                        <button class="btn btn-link prvcplc" id="prvcplc" onclick="location.href = '${pageContext.request.contextPath}/donate'" >Donate Us</button>
                     </li>
                 </ul>
                 <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
@@ -35,7 +34,7 @@
             <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item mr-3">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" >
+                        <a href="https://www.facebook.com/Roadtripin-105613620784221/?modal=admin_todo_tour" target="_blank" rel="noopener noreferrer" >
                             <i class="fab fa-facebook fa-2x fa-fw"></i>
                         </a>
                     </li>
@@ -71,7 +70,6 @@
                     </p>
                     <h5> Contact</h5>
                     <p>Contact the team at <span> <email> carpooling.team.project.cb7@gmail.com </email> </span> or follow the given link below.</p>
-
                     <h5>Terms of Use</h5>
                     <p>
                         You can't really use this site for carpooling in real life. It's off the internet.
@@ -86,7 +84,6 @@
         </div>
     </div>
 </div>
-
 <script>
     $(document).ready(function () {
         $(".prvcplc").click(function () {

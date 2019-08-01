@@ -5,15 +5,21 @@ import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
 import com.carpooling.services.TripService;
 import com.carpooling.utils.TripUtils;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,13 +43,21 @@ public class TripController {
     }
 
     @RequestMapping(value = "/doinserttrip", method = RequestMethod.POST)
-    public String doinsertTrip(ModelMap mm, @ModelAttribute("newtrip") Trip trip, BindingResult br) {
-        if (br.hasErrors()) {
-            return "home";
-        } else {
-            tripService.insert(trip);
-            return "selectaride";
-        }
+    public String doinsertTrip(ModelMap mm, @ModelAttribute("newtrip") Trip trip,
+            @RequestParam("year") String year,
+            @RequestParam("month") String month,
+            @RequestParam("day") String day,
+            @RequestParam("hour") String hour,
+            @RequestParam("mins") String mins) {
+        LocalDateTime ldt = LocalDateTime.of(
+                Integer.parseInt(year),
+                Integer.parseInt(month),
+                Integer.parseInt(day),
+                Integer.parseInt(hour),
+                Integer.parseInt(mins), 0);
+        trip.setDate(Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant()));
+        tripService.insert(trip);
+        return "selectaride";
     }
 
     @RequestMapping(value = "getalltrips", method = RequestMethod.GET)
@@ -145,6 +159,13 @@ public class TripController {
         List<Trip> triplist = user.getTripList();
         mm.addAttribute("thetakenktriplist", triplist);
         return "ridestook";
+    }
+
+    @RequestMapping(value = "adminalltrips", method = RequestMethod.GET)
+    public String getAdminAllTrips(ModelMap mm) {
+        List<Trip> trips = tripService.findAllTrips();
+        mm.put("trips", trips);
+        return "adminalltrips";
     }
 
 }

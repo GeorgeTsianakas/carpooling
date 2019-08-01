@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="/carpooling/css/ridesoffered.css" rel="stylesheet">
+        <link href="/carpooling/css/profile.css" rel="stylesheet">
     </head>
     <body>
         <%@include file="header.jsp" %>
@@ -27,14 +27,15 @@
                         <td colspan="2">
                             <h3> <c:out value="${trip.driverid.firstname}"/>  <c:out value="${trip.driverid.lastname}"/></h3>
                         <td   rowspan="1"> Available Seats:
-                            <h4>   <c:out value="${trip.availableseats}"/> </h4>
+                            <h3>   <c:out value="${trip.availableseats}"/> </h3>
                         </td>
                     </tr>
                     <tr class="w3-padding">
                         <td  colspan="2">From <h3> <c:out value="${trip.origin}"/> </h3> To <h3><c:out value="${trip.destination}"/> </h3> At <h3> <c:out value="${trip.date}"/> </h3></td>
                         <td rowspan="1">Cost:
-                            <h4>  <c:out value="${trip.costperseat}"/> &euro;</h4>
-                            Comments:<h5> <c:out value="${trip.info}"/> </h5>
+                            <h3>  <c:out value="${trip.costperseat}"/> &euro;</h3>
+                            Info
+                            <h3> <c:out value="${trip.info}"/> </h3>
                         </td>
                     </tr>
                 </table>

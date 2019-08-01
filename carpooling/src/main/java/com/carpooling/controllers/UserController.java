@@ -3,6 +3,7 @@ package com.carpooling.controllers;
 import com.carpooling.entities.User;
 import com.carpooling.services.UserService;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -74,7 +75,7 @@ public class UserController {
     @RequestMapping(value = "/deleteuser/{id}", method = RequestMethod.GET)
     public String deleteUser(ModelMap mm, @PathVariable int id) {
         userService.deleteUserByID(id);
-        return "redirect:/allusers";
+        return "redirect:/adminallusers";
     }
 
     @PostMapping("/rate")
@@ -90,6 +91,32 @@ public class UserController {
 
         userService.update(user);  // persist updated fields
         return "redirect:/selectaride";
+    }
+
+    @RequestMapping(value = "/adminallusers", method = RequestMethod.GET)
+    public String getAdminAllUsers(ModelMap mm) {
+        List<User> users = userService.findAllUsers();
+        mm.put("users", users);
+        return "adminallusers";
+    }
+
+    @RequestMapping(value = "updateuser", method = RequestMethod.GET)
+    public String updateProfileUser(ModelMap mm, HttpSession session) {
+        User u = (User) session.getAttribute("loggedinuser");
+        mm.addAttribute("user", u);
+        return "updateuserprofile";
+    }
+
+    @RequestMapping(value = "updatetheprofile", method = RequestMethod.POST)
+    public String doupdateProfileUser(ModelMap mm, @ModelAttribute("user") User u, HttpSession session) {
+        User user = (User) session.getAttribute("loggedinuser");
+        user.setUsername(u.getUsername());
+        user.setCellphone(u.getCellphone());
+        user.setBirthdate(u.getBirthdate());
+        user.setFirstname(u.getFirstname());
+        user.setLastname(u.getLastname());
+        userService.update(user);
+        return "redirect:/profile";
     }
 
 }

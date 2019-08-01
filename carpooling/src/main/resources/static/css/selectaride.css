@@ -28,7 +28,7 @@ transform: translate(-50%, -50%);
 
 #myTitle {
   
-color:transparent;
+color:black;
 
 
 }
@@ -52,24 +52,27 @@ transform: translate(-50%, -50%);
 /* Buttons find a ride */
 
 .button {
-    background-color:#f6f6f6;
-    border-color: rgb(36, 30, 30);
+    background-color:white; /* Green */
+    border: none;
     color:rgb(36, 30, 30);
-    padding: 30px 32px;
-    text-align: center;
+    padding: 15px 32px;
+    text-align: left;
     text-decoration: none;
     display: inline-block;
-    font-size: 30px;
+    font-size: 16px;
     margin: 8px 2px;
     cursor: pointer;
   }
   
+  
+.button2 {
+    width: 270%;}
+
   .button:hover {
    border-color: blue;
 }
   
-.button2 {
-    width: 270%;}
+
 
 /*    .orbitron {
       font-family: 'Orbitron', sans-serif;

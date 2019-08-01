@@ -13,7 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="css/alltrips.css" rel="stylesheet">
+        <link href="/carpooling/css/profile.css" rel="stylesheet">
 
     </head>
     <body>
@@ -34,7 +34,7 @@
                     </tr>
                     <tr class="w3-padding">
                         <td  colspan="2">From  <c:out value="${trip.origin}"/> To <c:out value="${trip.destination}"/> At <c:out value="${trip.date}"/></td>
-                        <td rowspan="1">Cost($):
+                        <td rowspan="1">Cost(&euro;):
                             <c:out value="${trip.costperseat}"/>
                         </td>
                     </tr>
