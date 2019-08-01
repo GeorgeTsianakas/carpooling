@@ -22,14 +22,15 @@
     </head>
 
     <body>
-        
+
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <h1 class="orbitron">Road Trippin' </h1>
-                <a href="donate" class="btn btn-primary">Donate</a>
-                <a href="register/createaccount" class="btn btn-primary" id="myBtn1">Sign Up</a>
-                <a href="login" class="btn btn-primary" id="myBtn2">Sign In</a>
+                <div class="btn-group">
+                    <a href="register/createaccount" class="btn btn-primary" id="myBtn1">Sign Up</a>
+                    <a href="login" class="btn btn-primary" id="myBtn2">Sign In</a>
+                </div>
             </div>
         </nav>
 
@@ -161,7 +162,7 @@
         </section>
 
         <%@include file="footer.html" %>
-        
+
     </body>
 
 </html>

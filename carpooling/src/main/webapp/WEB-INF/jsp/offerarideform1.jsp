@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class=" row">
-                            <div class="col-8"><span class="input-text"> Enter the cost per seat ($)</span></div>
+                            <div class="col-8"><span class="input-text"> Enter the cost per seat (&euro;)</span></div>
                             <div class="col-4"> <springForm:input path="costperseat" type="number" class=" button5 button3"/>
                                 <springForm:errors path="costperseat"/>
                             </div>

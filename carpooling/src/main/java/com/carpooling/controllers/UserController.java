@@ -2,7 +2,10 @@ package com.carpooling.controllers;
 
 import com.carpooling.entities.User;
 import com.carpooling.services.UserService;
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
@@ -117,6 +121,19 @@ public class UserController {
         user.setLastname(u.getLastname());
         userService.update(user);
         return "redirect:/profile";
+    }
+
+    @PostMapping("/uploadphoto")
+    public String uploadProfilePic(@RequestParam("photo") MultipartFile mf, HttpSession session) {
+        User user = (User) session.getAttribute("loggedinuser");
+        try {
+            user.setPhotofilename(mf.getOriginalFilename());
+            user.setPhoto(mf.getBytes());
+            userService.update(user);
+        } catch (IOException ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return "profile";
     }
 
 }

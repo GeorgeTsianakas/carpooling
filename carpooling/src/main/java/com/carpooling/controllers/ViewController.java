@@ -2,6 +2,11 @@ package com.carpooling.controllers;
 
 import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
+//import com.paypal.base.codec.binary.Base64;
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,8 +35,19 @@ public class ViewController {
         return "findarideform1";
     }
 
-    @GetMapping("profile")
-    public String sendToProfilePage(Model model) {
+    @GetMapping("/profile")
+    public String sendToProfilePage(ModelMap modelmap, HttpSession session) {
+        User user = (User) session.getAttribute("loggedinuser");
+        if (user.getPhoto() != null) {
+            byte[] encodeBase64 = Base64.getEncoder().encode(user.getPhoto());      //.encodeBase64(user.getPhoto());
+            String base64Encoded;
+            try {
+                base64Encoded = new String(encodeBase64, "UTF-8");
+                modelmap.put("userImage", base64Encoded);
+            } catch (UnsupportedEncodingException ex) {
+                Logger.getLogger(ViewController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         return "profile";
     }
 

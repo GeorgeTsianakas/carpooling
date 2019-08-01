@@ -21,7 +21,15 @@
         <div class="ex2 w3-row-padding w3-container w3-padding">
             <table  class="w3-table w3-twothird w3-padding float_center  ">
                 <tr class="w3-padding">
-                    <td rowspan="2">  <img src="img/default-profile-300x300.png"></td>
+                    <td rowspan="2">  <c:choose>
+                            <c:when test="${sessionScope.loggedinuser.photo == null}">
+                                <img src="img/default-profile-300x300.png" alt="default user img">
+                            </c:when>    
+                            <c:otherwise>
+                                <img src="data:image/jpeg;base64,${userImage}" alt="user img" />
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
                     <td colspan="2">
                         <h2> <c:out value="${sessionScope.loggedinuser.firstname}"/>  <c:out value="${sessionScope.loggedinuser.lastname}"/></h2>
                         My rating: <input type="hidden" id="rating" value="${sessionScope.loggedinuser.rating}" />
@@ -42,16 +50,31 @@
                 </tr>
                 <tr class="w3-padding">
                     <td> 
-                        <form method="GET" action="updateuser">
-                            <center>   <button type="submit">Update My Profile</button></center>
-                        </form>
+                        <div class="w3-display-container">
+                            <button id="modalbutton" class="w3-btn w3-left w3-tiny w3-round-large w3-blue">Upload Photo</button> 
+                            <a href="${pageContext.request.contextPath}/updateiser" class="w3-btn w3-right w3-tiny w3-round-large w3-blue">Update Profile</a>
+                        </div>
+                    </td>
+                    <td> 
+                        <h5>E-mail: <c:out value="${sessionScope.loggedinuser.email}"/> </h5>
                     </td>
                     <td  colspan="2"> 
-                        <h5>E-mail: <c:out value="${sessionScope.loggedinuser.email}"/> </h5>
+
                     </td>
                 </tr>
             </table>
         </div>
+        <div id="modalform" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom w3-round-large">
+                <div class="w3-container">
+                    <span id="x" class="w3-button w3-display-topright w3-round-large w3-hover-red">&times;</span>
+                    <form  class="w3-padding w3-margin" action="${pageContext.request.contextPath}/uploadphoto" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="photo"  class="w3-input w3-border w3-padding  w3-white w3-round-large " />
+                        <button type="submit" class="w3-btn w3-blue w3-block w3-round-large">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>           
         <p> 
             <%@include file="footer.html" %>
         </p>
@@ -79,6 +102,12 @@
                         $('#star5').addClass('checked');
                     }
                 }
+                $('#modalbutton').click((event) => {
+                    $('#modalform').show();
+                });
+                $('#x').click(function () {
+                    $('#modalform').hide();
+                });
             });
         </script>
     </body>

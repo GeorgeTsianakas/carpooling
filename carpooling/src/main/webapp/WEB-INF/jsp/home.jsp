@@ -5,8 +5,11 @@
     <head>
         <meta http-equiv="refresh" content="3; url= ${pageContext.request.contextPath}/login" />
         <title>Home</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
-        <center>Successfully Registered !</center>
+        <div class="w3-display-middle w3-padding w3-green w3-round-large w3-">
+            Successfully Registered !
+        </div>
     </body>
 </html>
