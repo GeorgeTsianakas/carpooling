@@ -88,7 +88,7 @@ public class TripController {
     @RequestMapping(value = "/deletetrip/{id}", method = RequestMethod.GET)
     public String deleteTrip(ModelMap mm, @PathVariable int id) {
         tripService.deleteTripByID(id);
-        return "redirect:/alltrips";
+        return "redirect:/adminalltrips";
     }
 
     @RequestMapping(value = "/takethetrip", method = RequestMethod.GET)

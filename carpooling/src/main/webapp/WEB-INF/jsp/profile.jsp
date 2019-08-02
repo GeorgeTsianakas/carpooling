@@ -40,7 +40,6 @@
                         <span id="star4" class="fa fa-star"></span>
                         <span id="star5" class="fa fa-star"></span>
                         <span id="num"></span> 
-                        <h5>Birth  Date: <c:out value="${sessionScope.loggedinuser.birthdate}"/> </h5>
                     </td>
                 </tr>
                 <tr class="w3-padding">
@@ -52,7 +51,7 @@
                     <td> 
                         <div class="w3-display-container">
                             <button id="modalbutton" class="w3-btn w3-left w3-tiny w3-round-large w3-blue">Upload Photo</button> 
-                            <a href="${pageContext.request.contextPath}/updateiser" class="w3-btn w3-right w3-tiny w3-round-large w3-blue">Update Profile</a>
+                            <a href="${pageContext.request.contextPath}/updateuser" class="w3-btn w3-right w3-tiny w3-round-large w3-blue">Update Profile</a>
                         </div>
                     </td>
                     <td> 
