@@ -6,12 +6,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Donate!</title>
         <style> 
-
             html{
                 background-color: lightgrey;
-
             }
-
             input{
                 width:80%;
                 padding-top: 20px;

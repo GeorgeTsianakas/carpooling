@@ -21,12 +21,10 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     </head>
     <body>
         <%@include file="header.jsp" %>
         <div class="w3-container">
-
             <h2><center>Carpooling Users</center></h2>
             <div class="w3-responsive">
                 <table class="w3-table-all">
@@ -38,7 +36,6 @@
                             <th>Last Name</th>
                             <th>Birth Date</th>
                             <th>Mobile</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -74,7 +71,6 @@
             </div>
         </div>
         <p> 
-
             <%@include file="footer.html" %>
         </p>
     </body>

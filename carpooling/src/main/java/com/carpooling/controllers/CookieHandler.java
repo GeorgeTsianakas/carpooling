@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import javax.servlet.http.Cookie;
 
-public class CookieHandler  {
+public class CookieHandler {
 
     private static HashMap<Integer, String> idCookieMap = new HashMap<>();
 

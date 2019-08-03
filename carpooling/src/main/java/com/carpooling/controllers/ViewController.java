@@ -2,7 +2,6 @@ package com.carpooling.controllers;
 
 import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
-//import com.paypal.base.codec.binary.Base64;
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.logging.Level;

@@ -58,7 +58,6 @@
                         <h5>E-mail: <c:out value="${sessionScope.loggedinuser.email}"/> </h5>
                     </td>
                     <td  colspan="2"> 
-
                     </td>
                 </tr>
             </table>

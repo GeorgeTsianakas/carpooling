@@ -7,7 +7,6 @@
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
             <title>Trip not found</title>
         </head>
         <body>

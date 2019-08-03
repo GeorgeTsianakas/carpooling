@@ -5,7 +5,6 @@ import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
 import com.carpooling.services.TripService;
 import com.carpooling.utils.TripUtils;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -14,12 +13,8 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -129,13 +124,11 @@ public class TripController {
             double lngo = Double.parseDouble(trip.getOriginlongtitude());
             double latd = Double.parseDouble(trip.getDestinationlatitude());
             double lngd = Double.parseDouble(trip.getDestinationlongtitude());
-
             Place o = new Place(lato, lngo);
             Place d = new Place(latd, lngd);
             boolean originIsOK = tripUtils.isWithinRadius(origin, o, 2.0); // εδω καρφωσα μια ακτινα 220 μετρων 
             boolean destinationIsOK = tripUtils.isWithinRadius(destination, d, 2.0);
-
-            if (originIsOK && destinationIsOK && date.equals(trip.getDate()) && (trip.getAvailableseats() > 0)) {
+            if (originIsOK && destinationIsOK && /*date.equals(trip.getDate()) && */ (trip.getAvailableseats() > 0)) {
                 results.add(trip);      // το βαζω σε μια λιστα με τα αποτελεσματα που θελω να δειξω στο χρηστη.
             }
         }

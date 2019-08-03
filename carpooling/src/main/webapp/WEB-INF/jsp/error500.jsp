@@ -2,13 +2,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="meta-layout">
-
     <head>
         <title>Go back to home page</title>
     </head>
-
     <body>
-
         <div layout:fragment="main">
             <div class="container-fluid page-body-wrapper full-page-wrapper">
                 <div class="content-wrapper d-flex align-items-center text-center error-page bg-info">
@@ -41,7 +38,5 @@
                 </div>
             </div>
         </div>
-
     </body>
-
 </html>

@@ -41,9 +41,7 @@ crossorigin="anonymous"></script>
                             <a class="dropdown-item" href="${pageContext.request.contextPath}/adminalltrips">All Trips</a>
                         </div>
                     </li>
-
                 </c:if>
-
                 <li class="nav-item active">
                     <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
                 </li>

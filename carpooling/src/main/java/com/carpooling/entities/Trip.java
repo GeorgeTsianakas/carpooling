@@ -274,5 +274,5 @@ public class Trip implements Serializable {
     public String toString() {
         return "com.carpooling.entities.Trip[ tripid=" + tripid + " ]";
     }
-    
+
 }

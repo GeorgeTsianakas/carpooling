@@ -65,7 +65,6 @@ public class LoginController {
         session.invalidate();
         RequestMappingHandlerAdapter rmha = new RequestMappingHandlerAdapter();
         rmha.setCacheSeconds(0);
-        // remove cookie if present!
         CookieHandler.removeCookie(request.getCookies());
         return new ModelAndView("redirect:/login");
     }

@@ -88,11 +88,8 @@ public class UserController {
             @RequestParam("rating") int rating) {
 
         User user = userService.findUserByID(id); // get the driver from db
-
         user.setRating(user.getRating() + rating); // get his rating, add the new rating and set new rating
-
         user.setRatedby(user.getRatedby() + 1); // increase rated by 1
-
         userService.update(user);  // persist updated fields
         return "redirect:/selectaride";
     }

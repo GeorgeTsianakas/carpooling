@@ -59,7 +59,6 @@
     </p>
     <p>
         <%@include file="footer.html" %>  
-        <!--footer-->
     </p>
 </body>                  
 </html>

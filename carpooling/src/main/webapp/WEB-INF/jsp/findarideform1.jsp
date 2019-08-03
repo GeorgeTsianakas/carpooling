@@ -48,24 +48,20 @@
         </div>
         <p>
             <%@include file="footer.html" %>
-            <!-- footer-->
         </p>
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtNoXw0xit4u4OEX4cay9a9TEI9Q2htU&libraries=places&callback=initMap"
         async defer></script>
         <script>
             $(document).ready(() => {
-
                 $('#sub').on('click', (event) => {
                     let x = $('#pac-input-from').val();
                     let y = $('#pac-input-to').val();
                     let z = $('#d').val();
-
                     if (!(x && y && z)) {
                         event.preventDefault();
                     }
                 });
-
             });
         </script>
     </body>

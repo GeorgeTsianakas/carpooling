@@ -5,9 +5,7 @@
     <head>
         <title>Page Not Found</title>
     </head>
-
     <body>
-
         <div layout:fragment="main">
             <div class="container-fluid page-body-wrapper full-page-wrapper">
                 <div class="content-wrapper d-flex align-items-center text-center error-page bg-primary">
@@ -28,7 +26,5 @@
                 </div>
             </div>
         </div>
-
     </body>
-
 </html>

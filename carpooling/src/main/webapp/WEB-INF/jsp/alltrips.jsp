@@ -19,11 +19,8 @@
     <body>
         <%@include file="header.jsp" %>
         <c:set var="path" value="${pageContext.request.contextPath}"></c:set>
-
         <c:forEach var = "trip" items="${trips}">
-
             <div class="ex2 w3-row-padding w3-container w3-padding">
-
                 <table  class="w3-table w3-twothird w3-padding float_center  ">
                     <tr class="w3-padding">
                         <td colspan="2">

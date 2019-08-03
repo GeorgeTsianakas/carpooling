@@ -30,7 +30,6 @@ public class RegisterController {
     @InitBinder
     private void initBinder(WebDataBinder binder) {
         binder.setValidator(registerValidator);
-        // Date - YYYY-MM-dd
         SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
         binder.registerCustomEditor(Date.class, new CustomDateEditor(
                 dateFormat, false));

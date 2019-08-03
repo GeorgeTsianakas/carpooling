@@ -39,21 +39,17 @@
                     </div>
                 </div> 
             </springForm:form>
-            <!--        -->
         </div>
-
         <script>
             $(document).ready(() => {
                 $('button').click((event) => {
                     let one = $('#username').val();
                     let two = $('#password').val();
-
                     if (!(one && two)) {
                         event.preventDefault();
                     }
                 });
             });
         </script>
-
     </body>
 </html>

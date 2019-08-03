@@ -21,7 +21,6 @@
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
         <link href="/carpooling/css/sendmessage.css" rel="stylesheet" type="text/css"> 
-
     </head>
     <body>
         <%@include file="header.jsp" %> 
@@ -44,7 +43,6 @@
         </div>
         <p>
             <%@include file="footer.html" %>  
-            <!--footer-->
         </p>
         <script>
             $(document).ready(() => {

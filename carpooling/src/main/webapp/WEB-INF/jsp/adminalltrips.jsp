@@ -21,7 +21,6 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     </head>
     <body>
         <%@include file="header.jsp" %>
@@ -37,7 +36,6 @@
                             <th>Destination</th>
                             <th>Driver's Username</th>
                             <th>Trip Information</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -70,7 +68,6 @@
             </div>
         </div>
         <p> 
-
             <%@include file="footer.html" %>
         </p>
     </body>

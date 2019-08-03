@@ -17,19 +17,14 @@
         <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
         <link href="css/offeraride.css" rel="stylesheet" type="text/css"> 
         <script src="js/offeraride_melatlng.js" ></script>
-
     </head>
-
     <body>
         <%@include file="header.jsp" %> 
-
         <img src="img/04_offeraride.jpg" style="width:100%; height:1200px ;" class="containermenu" alt="Computer Hope">
         <div class="container-fluid mainmenu-size">
-
             <div class="row" >
                 <div class="col-sm-4  col-md-5 col-lg-1"></div>
                 <div class="col-sm-8 col-md-7 col-lg-5 inputs-location">
-
                     <springForm:form method="Post" modelAttribute="newtrip" action ="${pageContext.request.contextPath}/doinserttrip" >
 
                         <div id="pac-container" class="row">
@@ -43,7 +38,6 @@
                                 <springForm:input type="hidden" path="driverid" value="${sessionScope.loggedinuser.userid}"/>  
                             </div>
                         </div>
-
                         <div id="pac-container" class="row">
                             <div class="col-12">
                                 <springForm:input path="destination" id="pac-input-to" type="text" class=" button4 button3" placeholder="Riding To"/>
@@ -63,7 +57,6 @@
                                 <input type="hidden" id="hour" name="hour" />
                                 <input type="hidden" id="mins" name="mins" />
                                 <springForm:input path="totalseats" type="hidden" class=" button5 button3" name="quantity" value="4" />
-
                             </div>
                         </div>
                         <div class=" row">
@@ -82,17 +75,13 @@
                         <div class="row">
                             <div class="col-12">
                                 <springForm:textarea path="info" rows="3" cols="50" class=" button6 button3" placeholder="Add some information about your trip"/>
-
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-
                                 <button type="submit" id="subbutton" class="button5 submit_button2" >Submit</button>
                             </div>
-
                         </div>
-
                     </springForm:form>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 map-padding">
@@ -107,13 +96,11 @@
         <div class="row footer">
             <div class="col-12">
                 <%@include file="footer.html" %>  
-
             </div> 
         </div> 
         <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAtNoXw0xit4u4OEX4cay9a9TEI9Q2htU&libraries=places&callback=initMap"
         async defer></script>  
-
         <script>
             $(document).ready(function () {
                 $('#subbutton').on('click', function (event) {
@@ -127,11 +114,8 @@
                     $('#day').val(s[2]);
                     $('#hour').val(y[0]);
                     $('#mins').val(y[1]);
-
                 });
             });
-
         </script>
-
     </body>                  
 </html>     

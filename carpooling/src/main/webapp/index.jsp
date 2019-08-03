@@ -20,9 +20,7 @@
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
         <script src="scripts/modals.js"></script>
     </head>
-
     <body>
-
         <!-- Navigation -->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
@@ -33,7 +31,6 @@
                 </div>
             </div>
         </nav>
-
         <!-- Masthead -->
         <header class="masthead text-white text-center">
             <div class="overlay"></div>
@@ -47,7 +44,6 @@
                 </div>
             </div>
         </header>
-
         <!-- Icons Grid -->
         <section class="features-icons bg-light text-center">
             <div class="container">
@@ -66,7 +62,6 @@
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                             <div class="features-icons-icon d-flex align">
                                 <span> <i class="fas fa-leaf fa-align-center m-auto text-primary"></i> </span>
-
                             </div>
                             <h3>Environment</h3>
                             <p class="lead mb-0">Reducing the number of cars has an immediate positive impact on CO2 emissions.</p>
@@ -84,7 +79,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Image Showcases -->
         <section class="showcase">
             <div class="container-fluid p-0">
@@ -114,10 +108,7 @@
                 </div>
             </div>
         </section>
-
         <!-- Testimonials -->
-
-
         <section class="testimonials text-center bg-light">
             <div class="container">
                 <h2 class="mb-5">Our Team</h2>
@@ -146,7 +137,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Call to Action -->
         <section class="call-to-action text-white text-center">
             <div class="overlay"></div>
@@ -160,9 +150,6 @@
                 </div>
             </div>
         </section>
-
         <%@include file="footer.html" %>
-
     </body>
-
 </html>

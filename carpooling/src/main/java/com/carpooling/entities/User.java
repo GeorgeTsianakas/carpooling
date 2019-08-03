@@ -77,7 +77,7 @@ public class User implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "birthdate")
-    @DateTimeFormat(pattern="YYYY-MM-dd")
+    @DateTimeFormat(pattern = "YYYY-MM-dd")
     @Temporal(TemporalType.DATE)
     private Date birthdate;
     @Basic(optional = false)
@@ -282,5 +282,5 @@ public class User implements Serializable {
     public String toString() {
         return "com.carpooling.entities.User[ userid=" + userid + " ]";
     }
-    
+
 }

@@ -22,17 +22,11 @@
         <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
         <link href="css/adminpage.css" rel="stylesheet" type="text/css"> 
         <script src="js/adminpage.js" ></script>
-
     </head>
-
     <body>
-
         <%@include file="header.jsp" %> 
-
         <p>
             <%@include file="footer.html" %>  
-            <!--footer-->
         </p>
-
     </body>                  
 </html>
