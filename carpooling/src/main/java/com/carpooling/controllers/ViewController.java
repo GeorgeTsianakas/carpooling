@@ -80,4 +80,9 @@ public class ViewController {
         return "email";
     }
 
+    @GetMapping("payment")
+    public String paymentPage(Model model) {
+        return "payment";
+    }
+
 }
