@@ -19,7 +19,7 @@ Team Project for AFDEmp Coding Bootcamp
 * Spring Boot ![](https://img.shields.io/badge/Framework-Spring-informational?style=flat&logo=spring)					 
 * Google Maps API ![](https://img.shields.io/badge/API-GoogleMaps-informational?style=flat&logo=google-maps)
 * Javascript, HTML, CSS, Bootstrap ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript) ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5) ![](https://img.shields.io/badge/Code-CSS3-informational?style=flat&logo=CSS3) ![](https://img.shields.io/badge/Framework-Bootstrap-informational?style=flat&logo=bootstrap)
-* MySQL
+* MySQL ![](https://img.shields.io/badge/Database-MySQL-informational?style=flat&logo=mysql)
 ### Tools used
 * Netbeans IDE
 * Visual Studio Code ![](https://img.shields.io/badge/Editor-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code)
