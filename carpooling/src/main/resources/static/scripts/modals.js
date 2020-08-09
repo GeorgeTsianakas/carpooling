@@ -7,21 +7,21 @@
 
 $(document).ready(function () {
     $(".prvcplc").click(function () {
-      $("#prvcplcModal").modal();
+        $("#prvcplcModal").modal();
     });
-  });
-  $(document).ready(function () {
+});
+$(document).ready(function () {
     $("#myBtn").click(function () {
-      $("#myModal").modal();
+        $("#myModal").modal();
     });
-  });
-  $(document).ready(function () {
+});
+$(document).ready(function () {
     $("#myBtnSignUp").click(function () {
-      $("#myModalSignUp").modal();
+        $("#myModalSignUp").modal();
     });
-  });
-  $(document).ready(function () {
+});
+$(document).ready(function () {
     $("#my2ndBtnSignUp").click(function () {
-      $("#myModalSignUp").modal();
+        $("#myModalSignUp").modal();
     });
-  });
+});

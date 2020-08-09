@@ -2,11 +2,13 @@ package com.carpooling.controllers;
 
 import com.carpooling.entities.Trip;
 import com.carpooling.entities.User;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;

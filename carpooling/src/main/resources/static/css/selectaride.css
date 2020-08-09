@@ -1,9 +1,9 @@
 
 .containermenu {
-                position: relative;
-                text-align: center;
-                color: white;
-              }
+    position: relative;
+    text-align: center;
+    color: white;
+}
 
 /*.sticky {
     position: fixed;
@@ -17,44 +17,46 @@
     padding-top: 102px;
    
   }             */
-              
+
 /* Centered text */
 .centered {
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #myTitle {
-  
-color:black;
+
+    color: black;
 
 
 }
+
 #myTitle2 {
-  
-color:black;
+
+    color: black;
 
 
 }
 
 
 #mybuttons1 {
-position: absolute;
-top: 370%;
-left: -20%;
-right: 30%;
-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 370%;
+    left: -20%;
+    right: 30%;
+    transform: translate(-50%, -50%);
 
 
 }
+
 /* Buttons find a ride */
 
 .button {
-    background-color:white; /* Green */
+    background-color: white; /* Green */
     border: none;
-    color:rgb(36, 30, 30);
+    color: rgb(36, 30, 30);
     padding: 15px 32px;
     text-align: left;
     text-decoration: none;
@@ -62,16 +64,16 @@ transform: translate(-50%, -50%);
     font-size: 16px;
     margin: 8px 2px;
     cursor: pointer;
-  }
-  
-  
-.button2 {
-    width: 270%;}
-
-  .button:hover {
-   border-color: blue;
 }
-  
+
+
+.button2 {
+    width: 270%;
+}
+
+.button:hover {
+    border-color: blue;
+}
 
 
 /*    .orbitron {
@@ -79,7 +81,7 @@ transform: translate(-50%, -50%);
       
   }*/
 
-  #mybuttons2 {
+#mybuttons2 {
     position: absolute;
     top: 270%;
     left: -20%;
@@ -87,48 +89,48 @@ transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
 
-    }
+}
 
 
+/* Buttons offer a ride */
+.button3 {
+    background-color: rgb(47, 43, 43); /* Green */
+    border: none;
+    color: lightgrey;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
 
-    /* Buttons offer a ride */
-     .button3 {
-        background-color:rgb(47, 43, 43); /* Green */
-        border: none;
-        color:lightgrey;
-        padding: 15px 32px;
-        text-align: left;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 8px 2px;
-        cursor: pointer;
-        
-      }
-
-
-      .button4 {
-          width: 80%;}
-      
-      .button6{
-           width: 270%;
-          
-      }
-
-          .orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        table {
-          width: 90%;
-          height: 80%;
-        }
-
-        .tr{
-            height:150%;
+}
 
 
-        }
+.button4 {
+    width: 80%;
+}
+
+.button6 {
+    width: 270%;
+
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+table {
+    width: 90%;
+    height: 80%;
+}
+
+.tr {
+    height: 150%;
+
+
+}
 
 
 .centered_table_td {
@@ -137,7 +139,6 @@ transform: translate(-50%, -50%);
     left: 42%;
 
 }
-
 
 
 /*          .submit_button1{
@@ -171,15 +172,15 @@ transform: translate(-50%, -50%);
         left:10%;
   }*/
 
-#photo_table{
-  width:45%  
+#photo_table {
+    width: 45%
 
 
 }
 
-.offeraride_td{
-        width:60%;
-        
+.offeraride_td {
+    width: 60%;
+
 }
 
 

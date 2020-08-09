@@ -1,16 +1,16 @@
-    .containermenu {
-       position: absolute;
-       text-align: center;
-       color: white;
-     
-     }
+.containermenu {
+    position: absolute;
+    text-align: center;
+    color: white;
+
+}
 
 #map {
     height: 100%;
     width: 100%;
     position: fixed;
 }
- 
+
 /* Optional: Makes the sample page fill the window. */
 html,
 body {
@@ -19,120 +19,125 @@ body {
     padding: 0;
 
     /* background-image: url("/findaride_photos/04_offeraride.jpg"); */
-   background-size: 140% ;
-     background-repeat: no-repeat;
+    background-size: 140%;
+    background-repeat: no-repeat;
 }
 
 #myTitle {
-  position:relative;
-    color:rgba(37, 37, 37, 0.945);
-  left:40%;
-    
-    }
+    position: relative;
+    color: rgba(37, 37, 37, 0.945);
+    left: 40%;
 
-.mainmenu-size{
-    height:120%;
 }
 
-.inputs-location{
+.mainmenu-size {
+    height: 120%;
+}
+
+.inputs-location {
     margin-top: 2.5%;
-   height:120%;
- }
- 
- .tr{
-      height:150%;
+    height: 120%;
+}
 
-  }
-  
+.tr {
+    height: 150%;
+
+}
 
 
-.submit_button2{
-background-color:rgb(202, 196, 196);
-border: none;
-color:rgb(31, 28, 28);
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-margin: 8px 2px;
-cursor: pointer;
-width: 30%;
-left:10%;
-} 
+.submit_button2 {
+    background-color: rgb(202, 196, 196);
+    border: none;
+    color: rgb(31, 28, 28);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    width: 30%;
+    left: 10%;
+}
 
 .input-euro {
     position: relative;
-   
+
 }
+
 .input-euro.left input {
-    padding-left:18px;
+    padding-left: 18px;
 }
+
 .input-euro.right input {
-    padding-right:18px;
-    text-align:end; 
+    padding-right: 18px;
+    text-align: end;
 }
 
 .input-euro:before {
     position: absolute;
     top: 10;
-    content:"€";
-    
+    content: "€";
+
 }
+
 .input-euro.left:before {
     left: 5px;
     color: black;
 }
 
-    /* Buttons offer a ride */
-    .button3 {
-        background-color:rgb(192, 185, 185); 
-        border: none;
-        color:rgba(15, 15, 15, 0.842);
-       
-        text-align: left;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 8px 2px;
-        cursor: pointer;
-      }
-      
-      
-      .button4 {
-          width: 90%;
-          float:right;
-          padding: 15px 32px;
-      }
+/* Buttons offer a ride */
+.button3 {
+    background-color: rgb(192, 185, 185);
+    border: none;
+    color: rgba(15, 15, 15, 0.842);
 
-      .button5{
-          width:40%;
-          float:right;
-          padding: 16px 5px; 
-      }
-      .button6{
-        
-        float:right;
-        padding: 15px 8px;
-        
-    }
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
 
-      .input-text{
-        color:white;
-        font-weight: bold;
-        float:right;
-        padding-top: 8%;
-        margin-right:-20%;
-        
-      }
 
-      .map-padding{
-          padding-bottom:5%;
-          padding-top: 7%;
-          padding-right: 3%;
-          padding-left: 5%;
-          position: relative;
-         
-      }
-      
-      .orbitron{font-family:'Orbitron',sans-serif;}
+.button4 {
+    width: 90%;
+    float: right;
+    padding: 15px 32px;
+}
+
+.button5 {
+    width: 40%;
+    float: right;
+    padding: 16px 5px;
+}
+
+.button6 {
+
+    float: right;
+    padding: 15px 8px;
+
+}
+
+.input-text {
+    color: white;
+    font-weight: bold;
+    float: right;
+    padding-top: 8%;
+    margin-right: -20%;
+
+}
+
+.map-padding {
+    padding-bottom: 5%;
+    padding-top: 7%;
+    padding-right: 3%;
+    padding-left: 5%;
+    position: relative;
+
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}

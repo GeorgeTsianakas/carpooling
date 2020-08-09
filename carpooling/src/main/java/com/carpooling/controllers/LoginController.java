@@ -3,9 +3,11 @@ package com.carpooling.controllers;
 import com.carpooling.entities.User;
 import com.carpooling.services.UserService;
 import com.carpooling.validators.LoginValidator;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

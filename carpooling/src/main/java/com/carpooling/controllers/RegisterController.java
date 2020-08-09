@@ -4,9 +4,11 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.carpooling.entities.User;
 import com.carpooling.services.UserService;
 import com.carpooling.validators.RegisterValidator;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;

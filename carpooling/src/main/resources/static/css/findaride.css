@@ -2,7 +2,7 @@
     position: relative;
     text-align: center;
     color: white;
-  }
+}
 
 /*.sticky {
 position: fixed;
@@ -16,21 +16,20 @@ Add some top padding to the page content to prevent sudden quick movement (as th
 padding-top: 102px;
 
 }             */
-  
+
 /* Centered text */
 .centered {
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #myTitle {
 
-color:rgba(37, 37, 37, 0.945);
+    color: rgba(37, 37, 37, 0.945);
 
 }
-
 
 
 #mybuttons1 {
@@ -39,44 +38,46 @@ color:rgba(37, 37, 37, 0.945);
     left: -20%;
     right: 30%;
     transform: translate(-50%, -50%);
-    
-    
-    }
-    /* Buttons find a ride */
-    
-    .button {
-        background-color:white; /* Green */
-        border: none;
-        color:rgb(36, 30, 30);
-        padding: 15px 32px;
-        text-align: left;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 8px 2px;
-        cursor: pointer;
-      }
-      
-      
-      .button2 {
-          width: 270%;}
-     
-          .orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
 
-        .submit_button1{
-      background-color:rgb(47, 43, 43); /* Green */
-      border: none;
-      color:lightgrey;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 8px 2px;
-      cursor: pointer;
-      width: 100%;
-      margin-left: 70%;
-      
+
+}
+
+/* Buttons find a ride */
+
+.button {
+    background-color: white; /* Green */
+    border: none;
+    color: rgb(36, 30, 30);
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+
+.button2 {
+    width: 270%;
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.submit_button1 {
+    background-color: rgb(47, 43, 43); /* Green */
+    border: none;
+    color: lightgrey;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 70%;
+
 }

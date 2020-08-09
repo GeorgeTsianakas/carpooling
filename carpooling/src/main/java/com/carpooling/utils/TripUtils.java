@@ -1,7 +1,9 @@
 package com.carpooling.utils;
 
 import com.carpooling.dtos.Place;
+
 import java.lang.Math;
+
 import org.springframework.stereotype.Component;
 
 @Component

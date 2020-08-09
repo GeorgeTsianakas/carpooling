@@ -28,20 +28,20 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name = "trip")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Trip.findAll", query = "SELECT t FROM Trip t")
-    , @NamedQuery(name = "Trip.findByTripid", query = "SELECT t FROM Trip t WHERE t.tripid = :tripid")
-    , @NamedQuery(name = "Trip.findByDate", query = "SELECT t FROM Trip t WHERE t.date = :date")
-    , @NamedQuery(name = "Trip.findByOrigin", query = "SELECT t FROM Trip t WHERE t.origin = :origin")
-    , @NamedQuery(name = "Trip.findByDestination", query = "SELECT t FROM Trip t WHERE t.destination = :destination")
-    , @NamedQuery(name = "Trip.findByTotalseats", query = "SELECT t FROM Trip t WHERE t.totalseats = :totalseats")
-    , @NamedQuery(name = "Trip.findByAvailableseats", query = "SELECT t FROM Trip t WHERE t.availableseats = :availableseats")
-    , @NamedQuery(name = "Trip.findByCost", query = "SELECT t FROM Trip t WHERE t.cost = :cost")
-    , @NamedQuery(name = "Trip.findByCostperseat", query = "SELECT t FROM Trip t WHERE t.costperseat = :costperseat")
-    , @NamedQuery(name = "Trip.findByOriginlatitude", query = "SELECT t FROM Trip t WHERE t.originlatitude = :originlatitude")
-    , @NamedQuery(name = "Trip.findByOriginlongtitude", query = "SELECT t FROM Trip t WHERE t.originlongtitude = :originlongtitude")
-    , @NamedQuery(name = "Trip.findByDestinationlatitude", query = "SELECT t FROM Trip t WHERE t.destinationlatitude = :destinationlatitude")
-    , @NamedQuery(name = "Trip.findByDestinationlongtitude", query = "SELECT t FROM Trip t WHERE t.destinationlongtitude = :destinationlongtitude")
-    , @NamedQuery(name = "Trip.findByIsactive", query = "SELECT t FROM Trip t WHERE t.isactive = :isactive")})
+        @NamedQuery(name = "Trip.findAll", query = "SELECT t FROM Trip t")
+        , @NamedQuery(name = "Trip.findByTripid", query = "SELECT t FROM Trip t WHERE t.tripid = :tripid")
+        , @NamedQuery(name = "Trip.findByDate", query = "SELECT t FROM Trip t WHERE t.date = :date")
+        , @NamedQuery(name = "Trip.findByOrigin", query = "SELECT t FROM Trip t WHERE t.origin = :origin")
+        , @NamedQuery(name = "Trip.findByDestination", query = "SELECT t FROM Trip t WHERE t.destination = :destination")
+        , @NamedQuery(name = "Trip.findByTotalseats", query = "SELECT t FROM Trip t WHERE t.totalseats = :totalseats")
+        , @NamedQuery(name = "Trip.findByAvailableseats", query = "SELECT t FROM Trip t WHERE t.availableseats = :availableseats")
+        , @NamedQuery(name = "Trip.findByCost", query = "SELECT t FROM Trip t WHERE t.cost = :cost")
+        , @NamedQuery(name = "Trip.findByCostperseat", query = "SELECT t FROM Trip t WHERE t.costperseat = :costperseat")
+        , @NamedQuery(name = "Trip.findByOriginlatitude", query = "SELECT t FROM Trip t WHERE t.originlatitude = :originlatitude")
+        , @NamedQuery(name = "Trip.findByOriginlongtitude", query = "SELECT t FROM Trip t WHERE t.originlongtitude = :originlongtitude")
+        , @NamedQuery(name = "Trip.findByDestinationlatitude", query = "SELECT t FROM Trip t WHERE t.destinationlatitude = :destinationlatitude")
+        , @NamedQuery(name = "Trip.findByDestinationlongtitude", query = "SELECT t FROM Trip t WHERE t.destinationlongtitude = :destinationlongtitude")
+        , @NamedQuery(name = "Trip.findByIsactive", query = "SELECT t FROM Trip t WHERE t.isactive = :isactive")})
 public class Trip implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -97,8 +97,8 @@ public class Trip implements Serializable {
     @Column(name = "isactive")
     private Short isactive;
     @JoinTable(name = "usertrip", joinColumns = {
-        @JoinColumn(name = "tripid", referencedColumnName = "tripid")}, inverseJoinColumns = {
-        @JoinColumn(name = "userid", referencedColumnName = "userid")})
+            @JoinColumn(name = "tripid", referencedColumnName = "tripid")}, inverseJoinColumns = {
+            @JoinColumn(name = "userid", referencedColumnName = "userid")})
     @ManyToMany
     private List<User> userList;
     @JoinColumn(name = "driverid", referencedColumnName = "userid")
