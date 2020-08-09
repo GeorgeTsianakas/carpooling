@@ -16,13 +16,13 @@ Team Project for AFDEmp Coding Bootcamp
                   a. Gives access to read some restricted material e.g. e-book or
                   b. Buy some goods, e.g. purchase a digital object
 ### Technologies used
-* Spring Boot
-* Google Maps API
-* Javascript, HTML, CSS, Bootstrap
+* Spring Boot ![](https://img.shields.io/badge/Framework-Spring-informational?style=flat&logo=spring)					 
+* Google Maps API ![](https://img.shields.io/badge/API-GoogleMaps-informational?style=flat&logo=google-maps)
+* Javascript, HTML, CSS, Bootstrap ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript) ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5) ![](https://img.shields.io/badge/Code-CSS3-informational?style=flat&logo=CSS3) ![](https://img.shields.io/badge/Framework-Bootstrap-informational?style=flat&logo=bootstrap)
 * MySQL
 ### Tools used
 * Netbeans IDE
-* Visual Studio Code
+* Visual Studio Code ![](https://img.shields.io/badge/Editor-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code)
 
 ## Authors
 * **George Tsianakas** -  [GeorgeTsianakas](https://github.com/GeorgeTsianakas)
